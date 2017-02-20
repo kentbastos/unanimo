@@ -1,8 +1,47 @@
 <html>
-<body>
-	
-	<table>
+<head>
+	<style type="text/css">
+		table {
+		    border-collapse: collapse;
+		}
 
+		table, th, td {
+		    border: 1px solid black;
+		    padding: 1em;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Classement général</h1>
+	<ol>
+		<% players.each { out.print "<li>" + it.name + " : " + it.totalPoints + "</li>"} %>
+	</ol>
+	<h1>Détail par joueur<h1>
+	<% players.each { %>
+	<h2>$it.name</h2>
+	<table>
+		<% it.proposalsPerDay.each { day, words ->  
+			def output = "<tr><td>Jour $day, total : ${it.pointsPerDay[day]}</td>"
+			words.each { word ->
+				output += "<td>$word.value:$word.points</td>"
+			}
+			output += "</tr>"
+			out.print output
+		} %>
+	</table>
+	<% } %>
+
+	<h1>Liste des mots pour chaque jour</h1>
+	<table>
+		<tbody>
+		<% (0..maxDay).each { %>
+			<tr>
+				<td>Jour $it</td>
+				<td><% pointsForWordsOfDays[it].each { word -> out.print word.value + ":" + word.points + " / "} %></td>
+			</tr>
+		<% } %>
+		</tbody>
 	</table>
 </body>
 </html>
