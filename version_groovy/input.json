@@ -1,0 +1,25 @@
+{
+	"players": [
+		{
+			"name": "david",
+			"proposals": {
+				"0": ["A b", "avec ààà", "MAJUSCULE", "AA", "BB", "C", "Z", "8"],
+				"1": ["titi", "avec ààà", "MAJUSCULE", "AA", "BB", "C", "Z", "8"]
+			}
+		},
+		{
+			"name": "bob",
+			"proposals": {
+				"0": ["A B", "a", "toto", "AA", "BB", "E", "F", "Z"],
+				"1": ["lili", "avec ààà"]
+			}
+		},
+		{
+			"name": "roger",
+			"proposals": {
+				"0": ["AA", "2", "3", "4", "5", "6", "7", "8"],
+				"1": ["1", "2", "3", "4", "5", "6", "7", "8"]
+			}
+		}
+	]
+}
