@@ -7,23 +7,11 @@ def jsonSlurper = new JsonSlurper()
 def inputData = jsonSlurper.parseText(input.text)
 
 List<Player> players = []
-int maxDay = Integer.MIN_VALUE
 
-// Parsing de l'input
-inputData.players.each { player ->
-	def currentPlayer = new Player(name: player.name)
-	def playerProposals = []
-	player.proposals.each { dayIndex, allWords ->
-		allWords = allWords.collect { 
-			Normalizer.normalize(it.toUpperCase(), Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "")
-		}
-		currentPlayer.proposalsPerDay.put(dayIndex.toInteger(), allWords.collect { new Word(value: it.trim()) })
-		maxDay = Math.max(maxDay, dayIndex.toInteger())
-	}
-	players << currentPlayer
-}
+parseInput(inputData, players)
 
-println "> lecture des données ok"
+int maxDay = players.collect {it.proposalsPerDay.keySet()} .flatten().max()
+println "> maxDay : $maxDay"
 
 checkInput(players)
 
@@ -33,11 +21,8 @@ checkInput(players)
 def pointsForWordsOfDays = [:] // clé = jour / valeur = liste de Word
 (0..maxDay).each { day -> pointsForWordsOfDays.put(day, computePointsForWordsOfDay(day, players)) }
 
-println "> calcul des points par mot pour chaque jour ok"
-
 // affectation des points des joueurs
 computePointsForPlayers(players, pointsForWordsOfDays)
-println "> calcul des points pour les joueurs ok"
 
 // affichage
 def outTemplateText = new File('.', 'resultats.template').text
@@ -49,6 +34,35 @@ output.newWriter().withWriter { it << template.toString() }
 /**************************************************************************************************************
 *                                                  METHODES ET CLASSES
 **************************************************************************************************************/
+
+def parseInput(inputData, players){
+	inputData.players.each { player ->
+		def currentPlayer = new Player(name: player.name)
+		def playerProposals = []
+		player.proposals.each { dayIndex, allWords ->
+			allWords = allWords.collect { 
+				Normalizer.normalize(it.toUpperCase(), Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "")
+			}
+			currentPlayer.proposalsPerDay.put(dayIndex.toInteger(), allWords.collect { new Word(value: it.trim()) })
+		}
+		players << currentPlayer
+	}
+	println "> data parsing done"
+}
+
+def checkInput(List<Player> players){
+	players.each { player ->
+		player.proposalsPerDay.each { day, words ->
+			if(words.toSet().size() != words.size()){
+				println "/!\\ WARN : le joueur $player.name a des doublons pour le jour $day"
+			}
+			if(words.size() != 8) {
+				println "/!\\ WARN : le joueur $player.name a moins de 8 mots pour le jour $day"	
+			}
+		}
+	}
+	println "> data checked"
+}
 
 List<Word> computePointsForWordsOfDay(int day, List<Player> players) {
 	def wordsForDay = []
@@ -83,20 +97,7 @@ def computePointsForPlayers(List<Player> players, Map pointsForWordsOfDays){
 			player.pointsPerDay.put(day, totalForDay)
 		}
 	}
-}
-
-def checkInput(List<Player> players){
-	println "> vérification des données"
-	players.each { player ->
-		player.proposalsPerDay.each { day, words ->
-			if(words.toSet().size() != words.size()){
-				println "/!\\ WARN : le joueur $player.name a des doublons pour le jour $day"
-			}
-			if(words.size() != 8) {
-				println "/!\\ WARN : le joueur $player.name a moins de 8 mots pour le jour $day"	
-			}
-		}
-	}
+	println "> players points computed"
 }
 
 @ToString

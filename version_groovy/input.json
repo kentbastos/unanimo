@@ -1,24 +1,33 @@
 {
 	"players": [
 		{
-			"name": "david",
+			"name": "flavien b",
 			"proposals": {
-				"0": ["A b ", "A b", "MAJUSCULE", "AA", "BB", "C", "Z", "8"],
-				"1": ["titi", "avec ààà", "MAJUSCULE", "AA", "BB", "C", "Z", "8"]
+				"0": ["TRUMP","BASEBALL","CAPITALISME","AIGLE","ETOILE","CANADA","NEW-YORK","MEXIQUE"]
 			}
 		},
 		{
-			"name": "bob",
+			"name": "eric v",
 			"proposals": {
-				"0": ["A B", "a", "toto", "AA", "BB", "E", "F", "Z"],
-				"1": ["lili", "avec ààà"]
+				"0": ["OBAMA", "TRUMP", "ÉLECTIONS", "OBÉSITÉ", "MCDO", "FOLIE", "CONTINENT", "E3"]
 			}
 		},
 		{
-			"name": "roger",
+			"name": "quentin m",
 			"proposals": {
-				"0": ["AA", "dsf", "kgfs lk", "ml", "fd", "df", "dfs", "dfsz szvcf"],
-				"1": ["CD", "LKL", "lkml", "ùmlùm", "plz dzl", "sdz", "dzz", "oifz lkhfz"]
+				"0": ["TRUMP","INDIEN","HOLLYWOOD","FAST FOOD","STATUE DE LA LIBERTÉ","WORLD TRADE CENTER","NEW YORK","CALIFORNIE"]
+			}
+		},
+		{
+			"name": "matthias d",
+			"proposals": {
+				"0": ["Cactus", "Obésité", "Statue", "Sam", "Ketchup", "Trump", "Continent", "Déserts"]
+			}
+		},
+		{
+			"name": "cedric l",
+			"proposals": {
+				"0": ["continent", "atlantique", "indiens", "cowboy", "texas", "liberté", "canada", "dollars"]
 			}
 		}
 	]
