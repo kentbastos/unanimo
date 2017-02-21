@@ -1,0 +1,1 @@
+This version implements an other input format. The players enter the words in a google forms, and the data are retrieved via an excel sheet. It's quicker.

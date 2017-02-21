@@ -1,0 +1,20 @@
+{
+	"days": [
+		{
+			"index": 0,
+			"name": "lundi",
+			"players": [
+				{"name":"joueur1", "proposal": ["a", "b", "c", "d", "e", "f", "g", "h"]},
+				{"name":"joueur2", "proposal": ["aa", "bb", "c", "dd", "ee", "ff", "gg", "a"]}
+			]
+		},
+		{
+			"index": 1,
+			"name": "mardi",
+			"players": [
+				{"name":"joueur1", "proposal": ["a", "b", "c", "d", "e", "f", "g", "h"]},
+				{"name":"joueur2", "proposal": ["aa", "bb", "cc", "dd", "ee", "ff", "gg", "a"]}
+			]
+		}
+	]
+}
