@@ -15,8 +15,6 @@ println "> maxDay : $maxDay"
 
 checkInput(players)
 
-// TODO check des doublons et de la taille de données
-
 // calcul de la liste des mots et des points associés
 def pointsForWordsOfDays = [:] // clé = jour / valeur = liste de Word
 (0..maxDay).each { day -> pointsForWordsOfDays.put(day, computePointsForWordsOfDay(day, players)) }
