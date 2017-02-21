@@ -4,9 +4,10 @@ The script helps to compute the points for unanimo, if you play with people by e
 
 ## HOW TO
 
+* spécify the output directory in the variable "outputDir"
 * Filled the data in the input.json file. It contains a list of players and their proposals for each day.
 * Run the script with the command : groovy unanimo.groovy
-* The output is an html file.
+* The output is an html file named unanimo.html.
 
 ## Details
 

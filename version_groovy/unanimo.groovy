@@ -26,7 +26,8 @@ computePointsForPlayers(players, pointsForWordsOfDays)
 def outTemplateText = new File('.', 'resultats.template').text
 def engine = new groovy.text.SimpleTemplateEngine()
 def template = engine.createTemplate(outTemplateText).make(["maxDay": maxDay, "pointsForWordsOfDays": pointsForWordsOfDays, "players": players.sort {a,b -> b.totalPoints <=> a.totalPoints}])
-def output = new File('.', 'output.html')
+def outputDir = /\\srvfich\POUBELLE\Franck/
+def output = new File(outputDir, 'nivozero.html')
 output.newWriter().withWriter { it << template.toString() }
 
 /**************************************************************************************************************
@@ -41,7 +42,8 @@ def parseInput(inputData, players){
 			allWords = allWords.collect { 
 				Normalizer.normalize(it.toUpperCase(), Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "")
 			}
-			currentPlayer.proposalsPerDay.put(dayIndex.toInteger(), allWords.collect { new Word(value: it.trim()) })
+			allWords = allWords.collect { it.trim().replaceAll('-', ' ') }
+			currentPlayer.proposalsPerDay.put(dayIndex.toInteger(), allWords.collect { new Word(value: it) })
 		}
 		players << currentPlayer
 	}
