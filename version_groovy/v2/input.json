@@ -4,16 +4,25 @@
 			"index": 0,
 			"name": "lundi",
 			"players": [
-				{"name":"joueur1", "proposal": ["a", "b", "c", "d", "e", "f", "g", "h"]},
-				{"name":"joueur2", "proposal": ["aa", "bb", "c", "dd", "ee", "ff", "gg", "a"]}
+				{"name":"flavien", "proposal": ["TRUMP","BASEBALL","CAPITALISME","AIGLE","ETOILE","CANADA","NEW-YORK","MEXIQUE"]},
+				{"name":"eric", "proposal": ["OBAMA", "TRUMP", "ÉLECTIONS", "OBÉSITÉ", "MCDO", "FOLIE", "CONTINENT", "E3"]},
+				{"name":"quentin", "proposal": ["TRUMP","INDIEN","HOLLYWOOD","FAST FOOD","STATUE DE LA LIBERTÉ","WORLD TRADE CENTER","NEW YORK","CALIFORNIE"]},
+				{"name":"matthias", "proposal": ["Cactus", "Obésité", "Statue", "Sam", "Ketchup", "Trump", "Continent", "Déserts"]},
+				{"name":"cedric", "proposal": ["continent", "atlantique", "indiens", "cowboy", "texas", "liberté", "canada", "dollars"]},
+				{"name":"nicolas", "proposal": ["TRUMP","DOLLARS","MC DONALDS","HAMBURGERS","COCA-COLA","GOOGLE","MICROSOFT","JEUX VIDEO"]}
 			]
 		},
 		{
 			"index": 1,
 			"name": "mardi",
 			"players": [
-				{"name":"joueur1", "proposal": ["a", "b", "c", "d", "e", "f", "g", "h"]},
-				{"name":"joueur2", "proposal": ["aa", "bb", "cc", "dd", "ee", "ff", "gg", "a"]}
+				{"name":"flavien", "proposal": ["THE","REVEIL","MATIN","PAUSE","INSTANTANE","CHOCOLAT","CROISSANT","GRAIN"]},
+				{"name":"eric", "proposal": ["THÉ", "SUCRE", "BAR", "GOURMAND", "RESTAURANT", "PAUSE", "MACHINE", "CAFETIÉRE"]},
+				{"name":"quentin", "proposal": ["réveil","arabica","robusta","torréfier","thé","boisson","grain","percolateur"]},
+				{"name":"matthias", "proposal": ["Sucre", "Cuillère", "Matin", "Bouilloire", "Eau", "Développeurs", "Informatique", "Réveil"]},
+				{"name":"cedric", "proposal": ["mug", "sucre", "tasse", "pause", "machine", "stress", "cuillère", "eau"]},
+				{"name":"nicolas", "proposal": []},
+				{"name":"catalin", "proposal": ["THE", "EQUITABLE", "MACHINE", "TASSE", "MAX HAVELAAR", "COLOMBIE", "PLANTATION", "REVEIL"]}
 			]
 		}
 	]

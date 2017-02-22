@@ -16,14 +16,15 @@ inputData.days.each { day ->
 
 	Set<Word> allWordsOfADay = []
 
-	day.players.each { player ->
-		def currentPlayer = players.find { it.name == player.name }
+	day.players.each { inputPlayer ->
+		def currentPlayer = players.find { it.name == inputPlayer.name }
 		if(!currentPlayer) {
-			currentPlayer = new Player(name: player.name)
+			println "creation du joueur $inputPlayer.name"
+			currentPlayer = new Player(name: inputPlayer.name)
 			players << currentPlayer
 		}
-		println "on traite le joueur $player.name"
-		def words = player.proposal.collect { word ->
+		println "on traite le joueur $inputPlayer.name / propositions : $inputPlayer.proposals"
+		def words = inputPlayer.proposal.collect { word ->
 			word = formatWord(word)
 			def currentWord = allWordsOfADay.find { it.value == word }
 			if(!currentWord){
@@ -36,7 +37,7 @@ inputData.days.each { day ->
 			}
 			currentWord
 		}
-		currentPlayer.proposal << new Proposal(day: day.index, words:words)
+		currentPlayer.proposals << new Proposal(day: day.index, words:words)
 	}
 	wordsPerDay.put(day.index, allWordsOfADay)
 }
@@ -44,17 +45,29 @@ inputData.days.each { day ->
 println players
 println wordsPerDay
 
+// affichage
+def outTemplateText = new File('.', 'resultats.template').text
+def engine = new groovy.text.SimpleTemplateEngine()
+def template = engine.createTemplate(outTemplateText).make(["players": players, "wordsPerDay":wordsPerDay])
+def outputDir = /C:\Users\FRANCK\Downloads/
+def output = new File(outputDir, 'resultats_v2.html')
+output.newWriter().withWriter { it << template.toString() }
+
 
 @ToString
 class Player {
 	String name
-	List<Proposal> proposal = []
+	List<Proposal> proposals = []
+
+	int getTotal() { proposals.inject(0){ acc, proposal -> acc + proposal.getPoints() } }
 }
 
 @ToString
 class Proposal {
 	int day
 	List<Word> words
+
+	int getPoints() { words.inject(0) { acc, word -> acc + word.points } }
 }
 
 @ToString

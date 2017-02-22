@@ -26,7 +26,7 @@ computePointsForPlayers(players, pointsForWordsOfDays)
 def outTemplateText = new File('.', 'resultats.template').text
 def engine = new groovy.text.SimpleTemplateEngine()
 def template = engine.createTemplate(outTemplateText).make(["maxDay": maxDay, "pointsForWordsOfDays": pointsForWordsOfDays, "players": players.sort {a,b -> b.totalPoints <=> a.totalPoints}])
-def outputDir = /\\srvfich\POUBELLE\Franck/
+def outputDir = /C:\Users\FRANCK\Downloads/
 def output = new File(outputDir, 'resultats.html')
 output.newWriter().withWriter { it << template.toString() }
 

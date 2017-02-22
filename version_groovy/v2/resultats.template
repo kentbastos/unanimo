@@ -15,23 +15,21 @@
 
 	<h1>Classement général</h1>
 	<ol>
-		<% players.each { out.print "<li>" + it.name + " : " + it.totalPoints + "</li>"} %>
+		<% players.sort { a,b -> b.total <=> a.total }.each { out.print "<li>" + it.name + " : " + it.getTotal() + "</li>"} %>
 	</ol>
 
-	<% if(maxDay != 0){ %>
 	<h1>Points du jour</h1>
 	<ul>
-		<% players.each { out.print "<li>" + it.name + " : " + it.pointsPerDay[maxDay] + "</li>"} %>
+		<% players.each { out.print "<li>" + it.name + " : " + it.proposals.last().points + "</li>"} %>
 	</ul>
-	<% }%>
-	
+
 	<h1>Détail par joueur<h1>
 	<% players.each { %>
 	<h2>$it.name</h2>
 	<table>
-		<% it.proposalsPerDay.each { day, words ->  
-			def output = "<tr><td>Jour $day, total : ${it.pointsPerDay[day]}</td>"
-			words.sort { a,b -> b.points <=> a.points } .each { word ->
+		<% it.proposals.each { proposal ->  
+			def output = "<tr><td>Jour $proposal.day, total : ${proposal.points}</td>"
+			proposal.words.sort { a,b -> b.points <=> a.points } .each { word ->
 				output += "<td>$word.value:$word.points</td>"
 			}
 			output += "</tr>"
@@ -43,10 +41,10 @@
 	<h1>Liste des mots pour chaque jour</h1>
 	<table>
 		<tbody>
-		<% (0..maxDay).each { %>
+		<% wordsPerDay.each { %>
 			<tr>
-				<td>Jour $it</td>
-				<td><% pointsForWordsOfDays[it].each { word -> out.print word.value + ":" + word.points + " / "} %></td>
+				<td>Jour $it.key</td>
+				<td><% it.value.sort { a,b -> b.points <=> a.points }.each { word -> out.print word.value + ":" + word.points + " / "} %></td>
 			</tr>
 		<% } %>
 		</tbody>
