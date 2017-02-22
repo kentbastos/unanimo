@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript">
+  function generer(){
+		
+		var chaine = '"' + document.getElementById("mot1").value + '",';
+		chaine += '"' + document.getElementById("mot2").value + '",';
+		chaine += '"' + document.getElementById("mot3").value + '",';
+		chaine += '"' + document.getElementById("mot4").value + '",';
+		chaine += '"' + document.getElementById("mot5").value + '",';
+		chaine += '"' + document.getElementById("mot6").value + '",';
+		chaine += '"' + document.getElementById("mot7").value + '",';
+		chaine += '"' + document.getElementById("mot8").value + '"';
+        
+        console.log(chaine);
+		document.getElementById("resultat").value = chaine
+  }
+</script>
+
+<body>
+<center>
+Mot 1 : <input type="text" id="mot1" /> <br /><br />
+Mot 2 : <input type="text" id="mot2" /> <br /><br />
+Mot 3 : <input type="text" id="mot3" /> <br /><br />
+Mot 4 : <input type="text" id="mot4" /> <br /><br />
+Mot 5 : <input type="text" id="mot5" /> <br /><br />
+Mot 6 : <input type="text" id="mot6" /> <br /><br />
+Mot 7 : <input type="text" id="mot7" /> <br /><br />
+Mot 8 : <input type="text" id="mot8" /> <br /><br />
+
+<input type="button" value="Generer" onclick="generer()" /> <br /><br />
+
+<textarea id="resultat" rows="4" cols="50">
+</textarea>
+
+</center>
+</body>
+</html>

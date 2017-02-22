@@ -27,7 +27,7 @@ def outTemplateText = new File('.', 'resultats.template').text
 def engine = new groovy.text.SimpleTemplateEngine()
 def template = engine.createTemplate(outTemplateText).make(["maxDay": maxDay, "pointsForWordsOfDays": pointsForWordsOfDays, "players": players.sort {a,b -> b.totalPoints <=> a.totalPoints}])
 def outputDir = /\\srvfich\POUBELLE\Franck/
-def output = new File(outputDir, 'nivozero.html')
+def output = new File(outputDir, 'resultats.html')
 output.newWriter().withWriter { it << template.toString() }
 
 /**************************************************************************************************************
@@ -67,7 +67,7 @@ def checkInput(List<Player> players){
 List<Word> computePointsForWordsOfDay(int day, List<Player> players) {
 	def wordsForDay = []
 	players.each { player ->
-		def playerProposals = player.proposalsPerDay.find { it.key == day }.value
+		def playerProposals = player.proposalsPerDay.find { it.key == day }?.value
 		playerProposals.each { playerWord ->
 			def sameWord = wordsForDay.find { it.value == playerWord.value }
 			if(!sameWord){

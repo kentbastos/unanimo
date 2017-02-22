@@ -3,37 +3,48 @@
 		{
 			"name": "flavien b",
 			"proposals": {
-				"0": ["TRUMP","BASEBALL","CAPITALISME","AIGLE","ETOILE","CANADA","NEW-YORK","MEXIQUE"]
+				"0": ["TRUMP","BASEBALL","CAPITALISME","AIGLE","ETOILE","CANADA","NEW-YORK","MEXIQUE"],
+				"1": ["THE","REVEIL","MATIN","PAUSE","INSTANTANE","CHOCOLAT","CROISSANT","GRAIN"]
 			}
 		},
 		{
 			"name": "eric v",
 			"proposals": {
-				"0": ["OBAMA", "TRUMP", "ÉLECTIONS", "OBÉSITÉ", "MCDO", "FOLIE", "CONTINENT", "E3"]
+				"0": ["OBAMA", "TRUMP", "ÉLECTIONS", "OBÉSITÉ", "MCDO", "FOLIE", "CONTINENT", "E3"],
+				"1": ["THÉ", "SUCRE", "BAR", "GOURMAND", "RESTAURANT", "PAUSE", "MACHINE", "CAFETIÉRE"]
 			}
 		},
 		{
 			"name": "quentin m",
 			"proposals": {
-				"0": ["TRUMP","INDIEN","HOLLYWOOD","FAST FOOD","STATUE DE LA LIBERTÉ","WORLD TRADE CENTER","NEW YORK","CALIFORNIE"]
+				"0": ["TRUMP","INDIEN","HOLLYWOOD","FAST FOOD","STATUE DE LA LIBERTÉ","WORLD TRADE CENTER","NEW YORK","CALIFORNIE"],
+				"1": ["réveil","arabica","robusta","torréfier","thé","boisson","grain","percolateur"]
 			}
 		},
 		{
 			"name": "matthias d",
 			"proposals": {
-				"0": ["Cactus", "Obésité", "Statue", "Sam", "Ketchup", "Trump", "Continent", "Déserts"]
+				"0": ["Cactus", "Obésité", "Statue", "Sam", "Ketchup", "Trump", "Continent", "Déserts"],
+				"1": ["Sucre", "Cuillère", "Matin", "Bouilloire", "Eau", "Développeurs", "Informatique", "Réveil"]
 			}
 		},
 		{
 			"name": "cedric l",
 			"proposals": {
-				"0": ["continent", "atlantique", "indiens", "cowboy", "texas", "liberté", "canada", "dollars"]
+				"0": ["continent", "atlantique", "indiens", "cowboy", "texas", "liberté", "canada", "dollars"],
+				"1": ["mug", "sucre", "tasse", "pause", "machine", "stress", "cuillère", "eau"]
 			}
 		},
 		{
 			"name": "nicolas j",
 			"proposals": {
 				"0": ["TRUMP","DOLLARS","MC DONALDS","HAMBURGERS","COCA-COLA","GOOGLE","MICROSOFT","JEUX VIDEO"]
+			}
+		},
+		{
+			"name": "catalin c",
+			"proposals": {
+				"1": ["THE", "EQUITABLE", "MACHINE", "TASSE", "MAX HAVELAAR", "COLOMBIE", "PLANTATION", "REVEIL"]
 			}
 		}
 	]

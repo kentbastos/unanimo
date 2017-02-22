@@ -17,6 +17,14 @@
 	<ol>
 		<% players.each { out.print "<li>" + it.name + " : " + it.totalPoints + "</li>"} %>
 	</ol>
+
+	<% if(maxDay != 0){ %>
+	<h1>Classement du jour</h1>
+	<ol>
+		<% players.each { out.print "<li>" + it.name + " : " + it.pointsPerDay[maxDay] + "</li>"} %>
+	</ol>
+	<% }%>
+	
 	<h1>Détail par joueur<h1>
 	<% players.each { %>
 	<h2>$it.name</h2>
