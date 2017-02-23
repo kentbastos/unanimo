@@ -9,34 +9,40 @@
 		    border: 1px solid black;
 		    padding: 1em;
 		}
+
 	</style>
 </head>
 <body>
 
-	<h1>Classement général</h1>
-	<ol>
-		<% players.sort { a,b -> b.total <=> a.total }.each { out.print "<li>" + it.name + " : " + it.getTotal() + "</li>"} %>
-	</ol>
+	<div style="float:left">
+		<h1>Classement général</h1>
+		<ol>
+			<% players.sort { a,b -> b.total <=> a.total }.each { out.print "<li>" + it.name + " : " + it.getTotal() + "</li>"} %>
+		</ol>
+	</div>
+	<div>
+		<h1>Points du jour</h1>
+		<ul>
+			<% players.each { out.print "<li>" + it.name + " : " + it.proposals.last().points + "</li>"} %>
+		</ul>
+	</div>
 
-	<h1>Points du jour</h1>
-	<ul>
-		<% players.each { out.print "<li>" + it.name + " : " + it.proposals.last().points + "</li>"} %>
-	</ul>
-
-	<h1>Détail par joueur<h1>
-	<% players.each { %>
-	<h2>$it.name</h2>
-	<table>
-		<% it.proposals.each { proposal ->  
-			def output = "<tr><td>Jour $proposal.day, total : ${proposal.points}</td>"
-			proposal.words.sort { a,b -> b.points <=> a.points } .each { word ->
-				output += "<td>$word.value:$word.points</td>"
-			}
-			output += "</tr>"
-			out.print output
-		} %>
-	</table>
-	<% } %>
+	<div style="clear:both">
+		<h1>Détail par joueur<h1>
+		<% players.each { %>
+		<h2>$it.name</h2>
+		<table>
+			<% it.proposals.each { proposal ->  
+				def output = "<tr><td>Jour $proposal.day, total : ${proposal.points}</td>"
+				proposal.words.sort { a,b -> b.points <=> a.points } .each { word ->
+					output += "<td>$word.value:$word.points</td>"
+				}
+				output += "</tr>"
+				out.print output
+			} %>
+		</table>
+		<% } %>
+	</div>	
 
 	<h1>Liste des mots pour chaque jour</h1>
 	<table>

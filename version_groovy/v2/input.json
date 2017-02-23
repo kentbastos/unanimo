@@ -1,9 +1,9 @@
 {
 	"days": [
 		{
-			"index": 0,
-			"name": "lundi",
-			"players": [
+			"index"    : 0,
+			"name"     : "mardi",
+			"players"  : [
 				{"name":"flavien", "proposal": ["TRUMP","BASEBALL","CAPITALISME","AIGLE","ETOILE","CANADA","NEW-YORK","MEXIQUE"]},
 				{"name":"eric", "proposal": ["OBAMA", "TRUMP", "ÉLECTIONS", "OBÉSITÉ", "MCDO", "FOLIE", "CONTINENT", "E3"]},
 				{"name":"quentin", "proposal": ["TRUMP","INDIEN","HOLLYWOOD","FAST FOOD","STATUE DE LA LIBERTÉ","WORLD TRADE CENTER","NEW YORK","CALIFORNIE"]},
@@ -13,16 +13,31 @@
 			]
 		},
 		{
-			"index": 1,
-			"name": "mardi",
-			"players": [
+			"index"    : 1,
+			"name"     : "mercredi",
+			"players"  : [
 				{"name":"flavien", "proposal": ["THE","REVEIL","MATIN","PAUSE","INSTANTANE","CHOCOLAT","CROISSANT","GRAIN"]},
 				{"name":"eric", "proposal": ["THÉ", "SUCRE", "BAR", "GOURMAND", "RESTAURANT", "PAUSE", "MACHINE", "CAFETIÉRE"]},
 				{"name":"quentin", "proposal": ["réveil","arabica","robusta","torréfier","thé","boisson","grain","percolateur"]},
 				{"name":"matthias", "proposal": ["Sucre", "Cuillère", "Matin", "Bouilloire", "Eau", "Développeurs", "Informatique", "Réveil"]},
 				{"name":"cedric", "proposal": ["mug", "sucre", "tasse", "pause", "machine", "stress", "cuillère", "eau"]},
-				{"name":"nicolas", "proposal": []},
-				{"name":"catalin", "proposal": ["THE", "EQUITABLE", "MACHINE", "TASSE", "MAX HAVELAAR", "COLOMBIE", "PLANTATION", "REVEIL"]}
+				{"name":"nicolas", "proposal": ["expresso","el gringo","colombie","couleur","noir","tasse","grains","lait"]},
+				{"name":"catalin", "proposal": ["THE", "EQUITABLE", "MACHINE", "TASSE", "MAX HAVELAAR", "COLOMBIE", "PLANTATION", "REVEIL"]},
+				{"name":"heloise", "proposal": ["matin","court","reveil","petit-déjeuner","boisson","long","chaud","grain"]}
+			]
+		},
+		{
+			"index"    :2,
+			"name"     : "jeudi",
+			"players"  : [
+				{"name":"flavien", "proposal":["FEU","MARTEAU","TAPIS","VIN","COULEUR","SANG","STOP","ROSE"]},
+				{"name":"cedric", "proposal":["sang","marteau","vif","feu","communiste","russe","vin","viande"]},
+				{"name":"heloise", "proposal":["sang","bleu","blanc","tomate","poivron","colère","noir","ferrari"]},
+				{"name":"catalin", "proposal":["NOIR","BLEU","SANG","POURPRE","SOCIALISTE","VIF","RAGE","COULEUR"]},
+				{"name":"quentin", "proposal":["TAUREAU","SANG","VIN","URSS","POISSON","NEZ","CHINE","VIANDE"]},
+				{"name":"eric", "proposal":["BLEU","VERT","STOP","SANG","FRAISE","CERISE","PRIMAIRE","COULEUR"]},
+				{"name":"matthias", "proposal":["Camion","Pompiers","Sang","Ecarlate","Cerise","Communisme","Colère","Pomme"]},
+				{"name":"nicolas", "proposal":["peau","colère","sang","couleur","crayon","peinture","ferrari","voiture"]}
 			]
 		}
 	]
