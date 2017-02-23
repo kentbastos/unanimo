@@ -7,4 +7,5 @@ This version implements an other input format. The players enter the words in a 
 * paste the data in the inputFormater.groovy file (remove the header first)
 * run the script : groovy inpuFormater.groovy
 * copy the output and paste it in the input.json file
+* change the output folder in the variable 'outputDir'
 * run the unanimo.groovy file and voila
