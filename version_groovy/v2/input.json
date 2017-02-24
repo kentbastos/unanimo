@@ -39,6 +39,19 @@
 				{"name":"matthias", "proposal":["Camion","Pompiers","Sang","Ecarlate","Cerise","Communisme","Colère","Pomme"]},
 				{"name":"nicolas", "proposal":["peau","colère","sang","couleur","crayon","peinture","ferrari","voiture"]}
 			]
+		},
+		{
+			"index" :3,
+			"name": "vendredi",
+			"players": [
+				{"name":"cedric", "proposal":["slip","animal","australie","saut","box","poche","steak","bush"]},
+				{"name":"heloise", "proposal":["Australie","Poche","Saut","boxe","walibi","aborigène","sac","animal"]},
+				{"name":"flavien", "proposal":["AUSTRALIE","POCHE","SAUT","BOXE","MARSUPIAL","DESERT","SKIPPY","WALLABY"]},
+				{"name":"eric", "proposal":["AUSTRALIE","BOOMERANG","STEAK","SAUT","BOXE","ANIMAL","POCHE","BOND"]},
+				{"name":"matthias", "proposal":["Skippy","Australie","Boxe","Saut","Viande","Poche","Bonds","Vitesse"]},
+				{"name":"catalin", "proposal":["AUSTRALIE","POCHE","SAUT","MARSUPIAL","BOXE","WALLABY","ANIMAL","BEBE"]},
+				{"name":"quentin", "proposal":["AUSTRALIE","BOXE","POCHE","ANIMAL","SAUT","WALIBI","MARSUPIAL","BOND"]}
+			]
 		}
 	]
 }

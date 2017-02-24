@@ -14,7 +14,7 @@
 </head>
 <body>
 
-	<div style="float:left">
+	<div>
 		<h1>Classement général</h1>
 		<ol>
 			<% players.sort { a,b -> b.total <=> a.total }.each { out.print "<li>" + it.name + " : " + it.getTotal() + "</li>"} %>
@@ -27,7 +27,7 @@
 		</ul>
 	</div>
 
-	<div style="clear:both">
+	<div>
 		<h1>Détail par joueur<h1>
 		<% players.each { %>
 		<h2>$it.name</h2>
