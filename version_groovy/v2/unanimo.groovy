@@ -52,7 +52,7 @@ players.each { player ->
 def outTemplateText = new File('.', 'resultats.template').text
 def engine = new groovy.text.SimpleTemplateEngine()
 def template = engine.createTemplate(outTemplateText).make(["players": players, "wordsPerDay":wordsPerDay])
-def outputDir = /C:\Users\FRANCK\Downloads/
+def outputDir = "${System.getProperty('user.home')}/Downloads/"
 def output = new File(outputDir, 'resultats_v2.html')
 output.newWriter().withWriter { it << template.toString() }
 
